@@ -64,7 +64,7 @@ body {
 
 .account__container {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 300px 900px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -81,28 +81,30 @@ body {
 }
 
 .account__photo img {
-  height: 80px;
+  height: 70px;
   border-radius: 50%;
 }
 
 .account__blocks {
   display: flex;
-  border-bottom: 1px solid var(--color-passive);
+  border-bottom: 1px solid #363636;
 }
 
 .account__blocks--line {
-  border-right: 4px solid var(--color-black);
+  border-right: 6px solid var(--color-black);
 }
 
 .account__blocks--line:hover {
-  border-right: 4px solid var(--color-green);
+  border-right: 6px solid var(--color-green);
 }
 
 .account__blocks--item {
   display: flex;
   align-items: center;
   height: 50px;
+  font-size: 14px;
   font-weight: 600;
+  line-height: 24px;
   color: var(--color-passive);
 }
 
@@ -127,12 +129,83 @@ body {
 
 .account__description {
   display: grid;
-  grid-template-columns: 5% 40% 40% 5%;
+  grid-template-columns: 5% 45% 45% 5%;
   grid-template-rows: repeat(12, 1fr);
   background-color: white;
+  height: 100vh;
 }
 
 .account__description--title {
   grid-column: 2 / span 2;
+  align-self: center;
   font-size: 40px;
+  padding: 40px 0 40px 0;
+  letter-spacing: -1.5px;
+}
+
+.account__description--profile {
+  grid-column: 2 / span 1;
+  grid-row: 2;
+  align-self: center;
+}
+
+.account__description--profile h1 {
+  padding: 0px 0 20px 0;
+}
+
+.account__description--profile-item {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 3;
+}
+
+.account__description--profile-item ul li {
+  padding: 20px 0 20px 0;
+  list-style: none;
+  color: var(--color-passive);
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.button__outline {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+  align-self: center;
+  width: 250px;
+  padding: 15px 0;
+  margin-top: 50px;
+  color: var(--color-passive);
+  border: 2px solid var(--color-passive);
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.button__outline:hover {
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+  transform: scale(1.05);
+}
+
+.account__description--profile-data {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 3;
+}
+
+.account__description--profile-data ul li {
+  padding: 20px 0 20px 0;
+  list-style: none;
+  color: var(--color-black);
+  border-bottom: 1px solid #dfdfdf;
+  font-weight: 600;
+}
+
+.account__description--plan {
+  grid-column: 2 / span 2;
+  grid-row: 8 / span 1;
+  align-self: center;
+  padding: 0 20px 0 20px;
 }
