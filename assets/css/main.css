@@ -2,6 +2,7 @@
   --color-black: #191414;
   --color-green: #1db954;
   --color-white: #ffffff;
+  --color-passive: #939395;
   --font-spotify: "Montserrat", sans-serif;
   --background-account: linear-gradient(
     to bottom,
@@ -21,8 +22,10 @@ body {
   background: var(--background-account);
 }
 
+/*--------------* header * ---------------*/
+
 .header {
-  background-color: var(--color-black);
+  background-color: black;
 }
 
 .container__nav {
@@ -55,4 +58,81 @@ body {
 .nav__contain ul li:hover {
   color: var(--color-green);
   font-weight: 600;
+}
+
+/*--------------* account menu * ---------------*/
+
+.account__container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.account__container--menu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-black);
+}
+
+.account__photo {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.account__photo img {
+  height: 80px;
+  border-radius: 50%;
+}
+
+.account__blocks {
+  display: flex;
+  border-bottom: 1px solid var(--color-passive);
+}
+
+.account__blocks--line {
+  border-right: 4px solid var(--color-black);
+}
+
+.account__blocks--line:hover {
+  border-right: 4px solid var(--color-green);
+}
+
+.account__blocks--item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-weight: 600;
+  color: var(--color-passive);
+}
+
+.account__blocks--item:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.account__blocks--icon {
+  display: flex;
+  align-self: center;
+  margin: 0 25px;
+  font-size: 16px;
+  color: var(--color-passive);
+}
+
+.account__blocks--icon:hover {
+  color: var(--color-white);
+}
+
+/*--------------* account description * ---------------*/
+
+.account__description {
+  display: grid;
+  grid-template-columns: 5% 40% 40% 5%;
+  grid-template-rows: repeat(12, 1fr);
+  background-color: white;
+}
+
+.account__description--title {
+  grid-column: 2 / span 2;
+  font-size: 40px;
 }
